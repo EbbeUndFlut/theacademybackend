@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npx tsc --watch",
-    "serve": "nodemon -q dist/index.js"
+    "build": "tsc ",
+    "dev:serve": "nodemon -q dist/index.js",
+    "prod:serve": "node dist/index.js "
   },
   "keywords": [],
   "author": "",
