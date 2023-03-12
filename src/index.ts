@@ -1,5 +1,7 @@
 import express from 'express'
+import './config/config'
 
 const app = express()
+const PORT = process.env.PORT
 
-app.listen(4545, () => console.log("running server"))
+app.listen(PORT, () => console.log("running", PORT))
