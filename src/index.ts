@@ -1,5 +1,6 @@
 import express from 'express'
 import './config/config'
+import './config/db'
 
 import { router as authRouter } from './router/auth.router'
 

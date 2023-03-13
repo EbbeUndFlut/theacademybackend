@@ -1,6 +1,8 @@
 import express from 'express'
-import { register } from '../controller/auth.controller'
+import { login, register } from '../controller/auth.controller'
+import { encrypt } from '../middleware/encryptMiddleware'
 
 export const router = express.Router()
 
-router.post('/register', register)
+router.post('/register', encrypt, register)
+router.post('/login', encrypt, login)
