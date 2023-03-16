@@ -10,6 +10,7 @@ const cookieOptions = {
 export const register = async (req: Request, res: Response) => {
     const newUser = new User(req.body)
     try {
+        newUser.avatar = 'https://api.dicebear.com/5.x/identicon/svg?seed=' + newUser.email
         await newUser.save()
         res.status(200).end()
     } catch (err) {

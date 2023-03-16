@@ -4,6 +4,7 @@ const { Schema } = mongoose
 interface IUser {
     email: string
     password: string
+    avatar: string
     role?: string
     lastLogin?: Date
 }
@@ -25,6 +26,10 @@ const userSchema = new Schema<IUser>({
     lastLogin: {
         type: Date,
         default: Date.now()
+    },
+    avatar: {
+        type: String,
+        required: true
     }
 
 },
